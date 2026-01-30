@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<head>
+
+  
+</head>
+
+
+<body>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const streamUrl = params.get("src");
+
+  if(streamUrl) {
+    document.getElementById("player").src = streamUrl;
+  }
+</script>
+
+<audio id="player" autoplay></audio>
+
+  
+</body>
+
+
