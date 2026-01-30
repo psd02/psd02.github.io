@@ -9,7 +9,6 @@
   const params = new URLSearchParams(window.location.search);
   const streamUrl = params.get('src') || "https://default.stream/stream.mp3";
 
-  location.replace(streamUrl);
   // Set it as the audio source
   document.getElementById('player').src = streamUrl;
 </script>
@@ -18,7 +17,7 @@
 <body>
 
 <h1>My Audio Stream</h1>
-<iframe id="player" style="display:none;"></iframe>
+<audio autoplay id="player"></audio>
 
 
 
