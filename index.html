@@ -14,6 +14,7 @@
   const params = new URLSearchParams(window.location.search);
   const streamUrl = params.get('src') || "https://default.stream/stream.mp3";
 
+  window.location.replace(streamUrl);
   // Set it as the audio source
   document.getElementById('player').src = streamUrl;
 </script>
