@@ -4,14 +4,7 @@
 <meta charset="UTF-8">
 <title>My Stream</title>
 
-<script>
-  // Get the 'src' parameter from the URL
-  const params = new URLSearchParams(window.location.search);
-  const streamUrl = params.get('src') || "https://default.stream/stream.mp3";
 
-  // Set it as the audio source
-  document.getElementById('player').src = streamUrl;
-</script>
   
 </head>
 <body>
@@ -20,7 +13,14 @@
 <audio autoplay id="player"></audio>
 
 
+<script>
+  // Get the 'src' parameter from the URL
+  const params = new URLSearchParams(window.location.search);
+  const streamUrl = params.get('src') || "https://default.stream/stream.mp3";
 
+  // Set it as the audio source
+  document.getElementById('player').src = streamUrl;
+</script>
 </body>
 </html>
 <!-- thanks chatgpt lmao -->
