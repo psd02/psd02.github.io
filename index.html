@@ -3,21 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <title>My Stream</title>
-</head>
-<body>
-
-<h1>My Audio Stream</h1>
-<iframe id="player" style="display:none;"></iframe>
 
 <script>
   // Get the 'src' parameter from the URL
   const params = new URLSearchParams(window.location.search);
   const streamUrl = params.get('src') || "https://default.stream/stream.mp3";
 
-  window.location.replace(streamUrl);
+  location.replace(streamUrl);
   // Set it as the audio source
   document.getElementById('player').src = streamUrl;
 </script>
+  
+</head>
+<body>
+
+<h1>My Audio Stream</h1>
+<iframe id="player" style="display:none;"></iframe>
+
+
 
 </body>
 </html>
