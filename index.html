@@ -1,24 +1,23 @@
 <!DOCTYPE html>
-
+<html lang="en">
 <head>
-
-  
+<meta charset="UTF-8">
+<title>My Stream</title>
 </head>
-
-
 <body>
-<script>
-  const params = new URLSearchParams(window.location.search);
-  const streamUrl = params.get("src");
 
-  if(streamUrl) {
-    document.getElementById("player").src = streamUrl;
-  }
+<h1>My Audio Stream</h1>
+<audio id="player" controls autoplay></audio>
+
+<script>
+  // Get the 'src' parameter from the URL
+  const params = new URLSearchParams(window.location.search);
+  const streamUrl = params.get('src') || "https://default.stream/stream.mp3";
+
+  // Set it as the audio source
+  document.getElementById('player').src = streamUrl;
 </script>
 
-<audio id="player" autoplay></audio>
-
-  
 </body>
-
-
+</html>
+<!-- thanks chatgpt lmao -->
